@@ -1,0 +1,49 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "${title}",
+      "size": "Large",
+      "weight": "Bolder",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "${subtitle}",
+      "isSubtle": true,
+      "color": "Accent",
+      "weight": "Bolder",
+      "size": "Small",
+      "spacing": "None"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${description}",
+      "isSubtle": true,
+      "wrap": true
+    },
+    {
+      "type": "FactSet",
+      "facts": [
+          {
+              "title": "Prioritet",
+              "value": "${priority}"
+          },
+          {
+              "title": "Opprettet",
+              "value": "${dateCreated}"
+          }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Gå til notifikasjon",
+      "url": "${notificationUrl}"
+    }
+  ]
+}
